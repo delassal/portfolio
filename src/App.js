@@ -17,7 +17,7 @@ function App() {
         >
           Learn React
         </a>
-        <div className="text-3xl font-bold text-blue-600">Hello Tailwind! Test</div>
+        <div className="text-3xl font-bold text-blue-600">Hello Tailwind!</div>
       </header>
     </div>
   );
