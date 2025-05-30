@@ -1,10 +1,8 @@
-# https://www.robotstxt.org/robotstxt.html
-User-agent: *
-Disallow:
-
 # robots.txt für danielelassal.com
+# Weitere Infos: https://www.robotstxt.org/robotstxt.html
 
 User-agent: *
-Disallow:
+Disallow: /
+Allow: /
 
 Sitemap: https://danielelassal.com/sitemap.xml
