@@ -5,11 +5,13 @@ export function HeaderComponent() {
     const [darkMode, toggleDarkMode] = useDarkMode();
 
     return (
-        <header className="flex justify-between items-center py-10">
-            <div className="flex items-center gap-4">
+        <header className="flex items-center py-10">
+
+            {/*Image*/}
+            <div className="w-1/3 flex items-center justify-start gap-4">
                 <div className="relative">
                     <div
-                        className="h-16 w-16 rounded-full bg-white/90 p-0.5 shadow-lg ring-1 shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm dark:bg-zinc-800/90 dark:ring-white/10"
+                        className="h-16 w-16 rounded-full bg-white/90 p-0.5 shadow-lg ring-1 shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm transition duration-200 dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
                         style={{
                             opacity: 'var(--avatar-border-opacity, 1)',
                             transform: 'var(--avatar-border-transform)'
@@ -19,13 +21,12 @@ export function HeaderComponent() {
                              src="/avatar.png" style={{color: 'transparent'}}/>
                     </div>
                 </div>
-                <h1 className="text-xl font-bold">
-                    Daniel El-Assal
-                </h1>
             </div>
-            <div className="flex-1 flex justify-center">
+
+            {/*Menu*/}
+            <div className="w-1/3 flex justify-center">
                 <nav className="pointer-events-auto hidden md:block">
-                    <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg ring-1 shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
+                    <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg ring-1 shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm transition duration-200 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
                         <li><a
                             className="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400"
                             href="#about">About</a></li>
@@ -41,7 +42,9 @@ export function HeaderComponent() {
                     </ul>
                 </nav>
             </div>
-            <div className="pointer-events-auto">
+
+            {/*Dark Mode toggle*/}
+            <div className="w-1/3 flex justify-end">
                 <button
                     type="button"
                     aria-label={darkMode ? "Switch to light theme" : "Switch to dark theme"}
