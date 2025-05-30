@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Header } from './components/Header';
+import { About } from './components/About';
+import { Projects } from './components/Projects';
+import { Articles } from './components/Articles';
+import { Contact } from './components/Contact';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <div className="text-3xl font-bold text-blue-600">Hello Tailwind!</div>
-      </header>
+    <div className="bg-white dark:bg-zinc-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Header />
+        <main>
+          <About />
+          <Projects />
+          <Articles />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }
