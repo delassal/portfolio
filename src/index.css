@@ -11,6 +11,9 @@
     @apply bg-white text-zinc-800 dark:bg-zinc-900 dark:text-zinc-200;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    --avatar-border-opacity: 1;
+    --avatar-border-transform: none;
+    --avatar-image-transform: none;
   }
 
   h1, h2, h3, h4, h5, h6 {
