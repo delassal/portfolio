@@ -29,14 +29,14 @@ export function Expertise() {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {expertiseAreas.map((area) => (
-          <div 
+          <div
             key={area.id}
             className="group block"
           >
             <div className="relative aspect-video rounded-lg overflow-hidden mb-4">
-              <img 
-                src={area.imageUrl} 
-                alt={area.title} 
+              <img
+                src={area.imageUrl}
+                alt={area.title}
                 className="object-cover w-full h-full"
               />
             </div>
