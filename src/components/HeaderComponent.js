@@ -1,31 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
+import { useDarkMode } from '../hooks/useDarkMode';
 
 export function HeaderComponent() {
-    const [darkMode, setDarkMode] = useState(false);
+    const [darkMode, toggleDarkMode] = useDarkMode();
 
-    useEffect(() => {
-        // Check if user prefers dark mode
-        const isDarkMode = localStorage.getItem('darkMode') === 'true' ||
-            window.matchMedia('(prefers-color-scheme: dark)').matches;
-        setDarkMode(isDarkMode);
-        if (isDarkMode) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-    }, []);
-
-    const toggleDarkMode = () => {
-        const newDarkMode = !darkMode;
-        setDarkMode(newDarkMode);
-        localStorage.setItem('darkMode', newDarkMode.toString());
-
-        if (newDarkMode) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-    };
     return (
         <header className="flex justify-between items-center py-10">
             <div className="flex items-center gap-4">
