@@ -45,7 +45,7 @@ export function Projects() {
               />
             </div>
             <div className="p-4">
-              <h3 className="text-lg font-medium text-zinc-800 dark:text-zinc-100 group-hover:text-teal-500 transition-colors duration-300">
+              <h3 className="text-lg font-medium text-secondary-800 dark:text-secondary-100 group-hover:text-primary-500 transition-colors duration-300">
                 {project.title}
               </h3>
               <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">

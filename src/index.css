@@ -20,8 +20,9 @@
     @apply font-bold tracking-tight;
   }
 
-  a {
-    @apply text-teal-600 hover:text-teal-800 dark:text-teal-400 dark:hover:text-teal-300;
+  /* Globales Link-Styling, nicht für Navigation */
+  a:not(nav a, footer a) {
+    @apply text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300;
   }
 
   code {
