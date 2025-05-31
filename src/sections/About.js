@@ -2,7 +2,7 @@ import React from 'react';
 
 export function About() {
     return (
-        <section id="about" className="py-16">
+        <section id="about" className="py-16 w-full max-w-full">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
                     <h2 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
@@ -20,11 +20,11 @@ export function About() {
                         music.
                     </p>
                 </div>
-                <div className="relative">
+                <div className="relative lg:h-full">
                     <img
                         src="https://via.placeholder.com/400x500"
                         alt="Your Name"
-                        className="rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800 h-full w-full"
+                        className="rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800 w-full h-auto lg:h-full"
                     />
                 </div>
             </div>
