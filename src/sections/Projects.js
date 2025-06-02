@@ -51,7 +51,7 @@ const projects = [
     },
     {
         id: 6,
-        title: 'Master Thesis (RWTH Aachen University)',
+        title: 'Master Thesis @ RWTH Aachen University',
         description: 'Researching the impact of digital innovation on company performance and the role of top management in driving transformation.',
         link: '#',
         featured: true,
@@ -76,9 +76,8 @@ export function Projects() {
                 {/* First row: Two featured cards with images */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                     {projects.filter(p => p.featured && p.hasImage).slice(0, 2).map((project) => (
-                        <Link
+                        <div
                             key={project.id}
-                            to={project.link}
                             className="group block rounded-lg overflow-hidden bg-white/90 dark:bg-zinc-800/90 shadow-lg ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:ring-white/10 transition-all duration-300 hover:shadow-xl hover:ring-primary-400/40 dark:hover:ring-white/20"
                         >
                             {project.hasImage && (
@@ -126,16 +125,15 @@ export function Projects() {
                                     ))}
                                 </div>
                             </div>
-                        </Link>
+                        </div>
                     ))}
                 </div>
 
                 {/* Second row: Three smaller cards without images */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                     {projects.filter(p => !p.featured && !p.hasImage).slice(0, 3).map((project) => (
-                        <Link
+                        <div
                             key={project.id}
-                            to={project.link}
                             className={`group block p-6 rounded-lg bg-white/90 dark:bg-zinc-800/90 shadow-lg ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:ring-white/10 transition-all duration-300 hover:shadow-xl ${
                                 project.title === 'GitHub Projects'
                                     ? 'hover:ring-zinc-600/40 dark:hover:ring-zinc-300/30 relative hover:bg-zinc-800 hover:text-white dark:hover:bg-white dark:hover:text-black'
@@ -151,7 +149,13 @@ export function Projects() {
                             >
                                 {project.title}
                             </h3>
-                            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                            <p
+                                className={`mt-2 text-sm ${
+                                  project.title === 'GitHub Projects'
+                                    ? 'text-zinc-600 group-hover:text-white dark:text-zinc-400 dark:group-hover:text-black'
+                                    : 'text-zinc-600 dark:text-zinc-400'
+                                }`}
+                            >
                                 {project.description}
                             </p>
                             <div className="mt-4 flex flex-wrap gap-2">
@@ -182,16 +186,15 @@ export function Projects() {
                                     </a>
                                 </div>
                             )}
-                        </Link>
+                        </div>
                     ))}
                 </div>
 
                 {/* Third row: One large card without image */}
                 <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
                     {projects.filter(p => p.featured && !p.hasImage).slice(0, 1).map((project) => (
-                        <Link
+                        <div
                             key={project.id}
-                            to={project.link}
                             className="group block p-8 rounded-lg bg-blue-600 dark:bg-blue-800 text-white shadow-lg ring-1 ring-blue-700/50 dark:ring-blue-900/50 transition-all duration-300 hover:shadow-xl hover:bg-blue-700 dark:hover:bg-blue-900 hover:ring-blue-500/60 dark:hover:ring-blue-600/60"
                         >
                             {/* Animated indicator for a Master Thesis project */}
@@ -218,7 +221,7 @@ export function Projects() {
                   </span>
                                 ))}
                             </div>
-                        </Link>
+                        </div>
                     ))}
                 </div>
             </div>
