@@ -1,11 +1,11 @@
 import React from 'react';
-import {About} from './sections/About';
+import {Start} from './sections/Start';
 import {Projects} from './sections/Projects';
-import {Contact} from './sections/Contact';
+import {Expertise} from './sections/Expertise';
+import {About} from './sections/About';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import {HeaderComponent} from './components/HeaderComponent';
 import {FooterComponent} from './components/FooterComponent';
-import {Expertise} from './sections/Expertise';
 import {ScrollToHashElement} from './components/ScrollToHashElement';
 
 // Hauptkomponente, die alle Abschnitte enthält
@@ -26,13 +26,13 @@ function MainContent() {
                         <div className="w-full max-w-none px-4 sm:px-8 lg:px-12">
                             <HeaderComponent/>
                             <main>
-                                <About />
-                                <Expertise />
-                                <Projects />
-                                <Contact />
+                                <Start/>
+                                <Expertise/>
+                                <Projects/>
+                                <About/>
                             </main>
 
-                            <FooterComponent />
+                            <FooterComponent/>
                         </div>
                     </div>
                 </div>

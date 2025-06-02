@@ -7,10 +7,10 @@ export function HeaderComponent() {
     const [darkMode, toggleDarkMode] = useDarkMode();
 
     const navigationItems = [
-        {name: 'About', href: '#about'},
+        // {name: 'Start', href: '#start'},
         {name: 'Expertise', href: '#expertise'},
         {name: 'Projects', href: '#projects'},
-        {name: 'Contact', href: '#contact'}
+        {name: 'About', href: '#about'}
     ];
 
     return (
