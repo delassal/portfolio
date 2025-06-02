@@ -54,7 +54,7 @@ export function Expertise() {
                         key={area.id}
                         className="group block p-6 rounded-lg bg-white/90 dark:bg-zinc-800/90 shadow-lg ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:ring-white/10 transition-all duration-300 hover:shadow-xl hover:ring-primary-400/40 dark:hover:ring-white/20"
                     >
-                        <h3 className="text-xl font-medium text-zinc-800 dark:text-zinc-100 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
+                        <h3 className="text-xl font-semibold text-zinc-800 dark:text-zinc-100 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
                             {area.title}
                         </h3>
                         <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
