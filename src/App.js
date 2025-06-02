@@ -3,7 +3,6 @@ import {About} from './sections/About';
 import {Projects} from './sections/Projects';
 import {Contact} from './sections/Contact';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import {Link} from './components/Link';
 import {HeaderComponent} from './components/HeaderComponent';
 import {FooterComponent} from './components/FooterComponent';
 import {Expertise} from './sections/Expertise';
