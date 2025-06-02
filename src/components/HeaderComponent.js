@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { useDarkMode } from '../hooks/useDarkMode';
 import { Popover, Transition } from '@headlessui/react';
+import { Link } from './Link';
 
 export function HeaderComponent() {
     const [darkMode, toggleDarkMode] = useDarkMode();
@@ -38,12 +39,12 @@ export function HeaderComponent() {
                     <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg ring-1 shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm transition duration-200 hover:ring-primary-400/40 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
                         {navigationItems.map((item) => (
                             <li key={item.name}>
-                                <a
+                                <Link
                                     className="relative block px-3 py-2 transition text-secondary-500 hover:text-primary-600 dark:text-secondary-400 dark:hover:text-primary-400"
-                                    href={item.href}
+                                    to={item.href}
                                 >
                                     {item.name}
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>
@@ -73,15 +74,15 @@ export function HeaderComponent() {
                                         <div className="overflow-hidden rounded-lg bg-white/90 shadow-lg ring-1 shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm transition hover:ring-primary-400/40 dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20">
                                                                                             <div className="relative grid gap-6 p-6">
                                                 {navigationItems.map((item) => (
-                                                    <a
+                                                    <Link
                                                         key={item.name}
-                                                        href={item.href}
+                                                        to={item.href}
                                                         className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out text-secondary-500 hover:text-primary-600 dark:text-secondary-400 dark:hover:text-primary-400 hover:bg-zinc-100 dark:hover:bg-zinc-700"
                                                     >
                                                         <div className="ml-3">
                                                             <p className="text-sm font-medium">{item.name}</p>
                                                         </div>
-                                                    </a>
+                                                    </Link>
                                                 ))}
                                             </div>
                                         </div>

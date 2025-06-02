@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from '../components/Link';
 
 const projects = [
   {
@@ -32,9 +33,9 @@ export function Projects() {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project) => (
-          <a 
+          <Link 
             key={project.id}
-            href={project.link}
+            to={project.link}
             className="group block rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
           >
             <div className="relative aspect-video">
@@ -52,7 +53,7 @@ export function Projects() {
                 {project.description}
               </p>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </section>
