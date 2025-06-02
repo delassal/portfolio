@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { useDarkMode } from '../hooks/useDarkMode';
+import { Popover, Transition } from '@headlessui/react';
 
 export function HeaderComponent() {
     const [darkMode, toggleDarkMode] = useDarkMode();
+
+    const navigationItems = [
+        { name: 'About', href: '#about' },
+        { name: 'Expertise', href: '#expertise' },
+        { name: 'Projects', href: '#projects' },
+        { name: 'Contact', href: '#contact' }
+    ];
 
     return (
         <header className="flex items-center py-10">
@@ -25,22 +33,64 @@ export function HeaderComponent() {
 
             {/*Menu*/}
             <div className="w-1/3 flex justify-center">
+                {/* Desktop Navigation */}
                 <nav className="pointer-events-auto hidden md:block">
                     <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg ring-1 shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm transition duration-200 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
-                        <li><a
-                            className="relative block px-3 py-2 transition text-secondary-500 hover:text-primary-600 dark:text-secondary-400 dark:hover:text-primary-400"
-                            href="#about">About</a></li>
-                        <li><a
-                            className="relative block px-3 py-2 transition text-secondary-500 hover:text-primary-600 dark:text-secondary-400 dark:hover:text-primary-400"
-                            href="#expertise">Expertise</a></li>
-                        <li><a
-                            className="relative block px-3 py-2 transition text-secondary-500 hover:text-primary-600 dark:text-secondary-400 dark:hover:text-primary-400"
-                            href="#projects">Projects</a></li>
-                        <li><a
-                            className="relative block px-3 py-2 transition text-secondary-500 hover:text-primary-600 dark:text-secondary-400 dark:hover:text-primary-400"
-                            href="#contact">Contact</a></li>
+                        {navigationItems.map((item) => (
+                            <li key={item.name}>
+                                <a
+                                    className="relative block px-3 py-2 transition text-secondary-500 hover:text-primary-600 dark:text-secondary-400 dark:hover:text-primary-400"
+                                    href={item.href}
+                                >
+                                    {item.name}
+                                </a>
+                            </li>
+                        ))}
                     </ul>
                 </nav>
+
+                {/* Mobile Navigation */}
+                <div className="pointer-events-auto md:hidden">
+                    <Popover>
+                        {({open}) => (
+                            <>
+                                <Popover.Button className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg ring-1 shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
+                                    Menü
+                                    <svg viewBox="0 0 8 6" aria-hidden="true" className="ml-3 h-auto w-2 stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400">
+                                        <path d="M1.75 1.75 4 4.25l2.25-2.5" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                                    </svg>
+                                </Popover.Button>
+                                <Transition
+                                    as={Fragment}
+                                    enter="transition ease-out duration-100"
+                                    enterFrom="transform opacity-0 scale-95"
+                                    enterTo="transform opacity-100 scale-100"
+                                    leave="transition ease-in duration-75"
+                                    leaveFrom="transform opacity-100 scale-100"
+                                    leaveTo="transform opacity-0 scale-95"
+                                >
+                                                                            <Popover.Panel className="absolute left-1/2 z-10 mt-2 w-screen max-w-xs -translate-x-1/2 transform px-4 sm:px-0 lg:max-w-3xl">
+                                        <div className="overflow-hidden rounded-lg bg-white/90 shadow-lg ring-1 shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20">
+                                                                                            <div className="relative grid gap-6 p-6">
+                                                {navigationItems.map((item) => (
+                                                    <a
+                                                        key={item.name}
+                                                        href={item.href}
+                                                        className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out text-secondary-500 hover:text-primary-600 dark:text-secondary-400 dark:hover:text-primary-400 hover:bg-zinc-100 dark:hover:bg-zinc-700"
+                                                    >
+                                                        <div className="ml-3">
+                                                            <p className="text-sm font-medium">{item.name}</p>
+                                                        </div>
+                                                    </a>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </Popover.Panel>
+                                </Transition>
+                            </>
+                        )}
+                    </Popover>
+                </div>
             </div>
 
             {/*Dark Mode toggle*/}
