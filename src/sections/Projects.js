@@ -6,7 +6,7 @@ const projects = [
         title: 'zilbi 4',
         description: 'A fourth-generation auction platform with a focus on usability, automation, and scalable architecture.',
         imageUrl: '/zilbi-4.png',
-        link: 'https://https://reazil.vercel.app/login',
+        link: 'https://reazil.vercel.app/',
         featured: true,
         hasImage: true,
         technologies: ['React', 'Python', 'FastAPI', 'Node.js', 'Tailwind CSS', 'Flowbite.js', 'Vercel']
