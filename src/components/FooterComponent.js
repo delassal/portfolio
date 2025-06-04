@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from './Link';
+import { Legal } from '../sections/Legal';
 
 export function FooterComponent() {
     return (
@@ -15,6 +16,7 @@ export function FooterComponent() {
                     <Link className="transition text-secondary-500 hover:text-primary-600 dark:text-secondary-400 dark:hover:text-primary-400" to="#about">
                         About
                     </Link>
+                    <Legal />
                 </div>
                 <p className="text-sm text-zinc-400 dark:text-zinc-500">
                     &copy; {new Date().getFullYear()} Daniel El-Assal. All rights reserved.
