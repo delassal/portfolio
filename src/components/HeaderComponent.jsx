@@ -2,6 +2,7 @@ import React, {Fragment} from 'react';
 import {useDarkMode} from '../hooks/useDarkMode';
 import {Popover, Transition} from '@headlessui/react';
 import {Link} from './Link';
+import avatar from '../assets/logo512.png';
 
 export function HeaderComponent() {
     const [darkMode, toggleDarkMode] = useDarkMode();
@@ -27,7 +28,7 @@ export function HeaderComponent() {
                         }}>
                         <img alt="Avatar" decoding="async"
                              className="rounded-full bg-zinc-100 object-cover dark:bg-zinc-800 h-16 w-16 transition-all duration-300 group-hover:h-32 group-hover:w-32"
-                             src="/src/assets/logo512.png" style={{color: 'transparent'}}/>
+                             src={avatar} style={{color: 'transparent'}}/>
                     </div>
                 </div>
             </div>
