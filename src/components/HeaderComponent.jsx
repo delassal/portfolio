@@ -27,7 +27,7 @@ export function HeaderComponent() {
                         }}>
                         <img alt="Avatar" decoding="async"
                              className="rounded-full bg-zinc-100 object-cover dark:bg-zinc-800 h-16 w-16 transition-all duration-300 group-hover:h-32 group-hover:w-32"
-                             src="/logo512.png" style={{color: 'transparent'}}/>
+                             src="/src/assets/logo512.png" style={{color: 'transparent'}}/>
                     </div>
                 </div>
             </div>

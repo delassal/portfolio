@@ -1,11 +1,13 @@
 import React from 'react';
+import zilbiImage from '../assets/zilbi-4.png';
+import aixsolutionImage from '../assets/aixsolution.png';
 
 const projects = [
     {
         id: 1,
         title: 'zilbi 4',
         description: 'A fourth-generation auction platform with a focus on usability, automation, and scalable architecture.',
-        imageUrl: '/zilbi-4.png',
+        imageUrl: zilbiImage,
         link: 'https://zilbi.vercel.app/',
         featured: true,
         hasImage: true,
@@ -15,7 +17,7 @@ const projects = [
         id: 2,
         title: 'aixsolution – New CI & Website',
         description: 'Redesigned the corporate identity and built a modern, responsive website to reflect a fresh, innovative consulting brand.',
-        imageUrl: '/aixsolution.png',
+        imageUrl: aixsolutionImage,
         link: 'https://www.aixsolution.com',
         featured: true,
         hasImage: true,
