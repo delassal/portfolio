@@ -16,8 +16,6 @@ export function HeaderComponent() {
     return (
         <header className="relative flex items-center py-10">
 
-            <div className="pointer-events-none absolute inset-0 h-full bg-gradient-to-b from-white/90 via-white/70 to-white/0 dark:from-zinc-800/90 dark:via-zinc-800/70 dark:to-zinc-800/0"></div>
-
             {/*Image*/}
             <div className="w-1/3 flex items-center justify-start gap-4">
                 <div className="relative">
