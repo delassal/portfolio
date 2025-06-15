@@ -15,7 +15,7 @@ export function HeaderComponent() {
     ];
 
     return (
-        <header className="relative flex items-center py-10">
+        <header className="sticky top-0 z-50 flex items-center py-10">
 
             {/*Image*/}
             <div className="w-1/3 flex items-center justify-start gap-4">
