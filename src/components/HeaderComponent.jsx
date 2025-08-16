@@ -15,19 +15,19 @@ export function HeaderComponent() {
     ];
 
     return (
-        <header className="top-0 z-50 flex items-center py-10">
+        <header className="sticky top-0 z-50 flex items-center py-10">
 
             {/*Image*/}
             <div className="w-1/3 flex items-center justify-start gap-4">
                 <div className="relative">
                     <div
-                        className="group h-16 w-16 rounded-full bg-white/0 p-0 ring-1 shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm transition-all duration-300 hover:h-32 hover:w-32 hover:ring-primary-400/40 dark:bg-zinc-800/0 dark:ring-white/10 dark:hover:ring-white/20 hover:z-10"
+                        className="group h-16 w-16 rounded-full bg-white/0 p-0 ring-1 shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm transition-all hover:ring-primary-400/40 dark:bg-zinc-800/0 dark:ring-white/10 dark:hover:ring-white/20"
                         style={{
                             opacity: 'var(--avatar-border-opacity, 1)',
                             transform: 'var(--avatar-border-transform)'
                         }}>
                         <img alt="Avatar" decoding="async"
-                             className="rounded-full bg-zinc-100 object-cover shadow-lg shadow-zinc-800/5 dark:bg-zinc-800 h-16 w-16 transition-all duration-300 group-hover:h-32 group-hover:w-32"
+                             className="rounded-full bg-zinc-100 object-cover shadow-lg shadow-zinc-800/5 dark:bg-zinc-800 h-16 w-16"
                              src={avatar} style={{color: 'transparent'}}/>
                     </div>
                 </div>
